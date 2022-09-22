@@ -32,7 +32,7 @@ export default {
 
 
 <style lang="scss">
-@import "variable.sass";  
+@import "variable.scss";  
 * {
   padding: 0;
   margin: 0;
@@ -47,5 +47,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+}
+
+a:hover,li:hover {
+  color: $brand-color !important;
+  cursor: pointer;
 }
 </style>

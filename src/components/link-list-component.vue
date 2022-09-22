@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../variable.sass";
+@import "../variable.scss";
 div {
     margin: 1rem
 }

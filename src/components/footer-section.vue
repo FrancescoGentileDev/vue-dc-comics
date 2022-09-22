@@ -34,14 +34,14 @@
 </template>
 
 <script>
-import linkList from "./link-list.vue";
+import linkList from "./link-list-component.vue";
 export default {
   components: { linkList },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../variable.sass";
+@import "../variable.scss";
 
 section {
   background-color: $footer-color;

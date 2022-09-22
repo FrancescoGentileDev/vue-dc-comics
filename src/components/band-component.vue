@@ -1,12 +1,17 @@
 <template>
   <div>
-    <img src="../assets/img/buy-comics-digital-comics.png" alt="" srcset="" />
-    <p>digital comics</p>
+    <img :src='require(`../assets/img/${img}`)' alt="" srcset="" />
+    <p>{{text}}</p>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+    props: {
+        text: String,
+        img: String
+    }
+};
 </script>
 
 <style lang="scss" scoped>

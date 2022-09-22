@@ -1,10 +1,11 @@
 <template>
   <div>
     <section>
-      <band-component />
-      <band-component />
-      <band-component />
-      <band-component />
+      <band-component img="buy-comics-digital-comics.png" text="Digital Comics"/>
+      <band-component img="buy-comics-merchandise.png" text="DC Merchandise"/>
+      <band-component img="buy-comics-shop-locator.png" text="Subscription"/>
+      <band-component img="buy-comics-subscriptions.png" text="comic shop locator"/>
+      <band-component img="buy-dc-power-visa.svg" text="dc power visa"/>
     </section>
   </div>
 </template>
@@ -17,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../variable.sass";
+@import "../variable.scss";
 
 div {
   background-color: $brand-color;
