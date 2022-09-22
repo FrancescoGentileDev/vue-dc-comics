@@ -1,28 +1,51 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <header-section/>
+      <main-section/>
+      <band-section/>
+      <footer-section/>
   </div>
 </template>
 
+
+
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BandSection from './components/band-section.vue'
+import FooterSection from './components/footer-section.vue'
+import HeaderSection from './components/header-section.vue'
+import MainSection from './components/main-section.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HeaderSection,
+    MainSection,
+    BandSection,
+    FooterSection
   }
 }
 </script>
 
+
+
+
+
 <style lang="scss">
+@import "variable.sass";  
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+
+  background-color: $text-color;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
 }
 </style>
