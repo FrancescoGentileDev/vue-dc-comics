@@ -32,12 +32,12 @@ export default {
 
 header {
   background-color: $background;
-  
+
   .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1300px;
+    max-width: $max-width;
     margin: 0 auto;
     margin-top: 2rem;
     padding: 1rem;
