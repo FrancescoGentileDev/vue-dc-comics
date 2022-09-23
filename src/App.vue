@@ -15,7 +15,7 @@ import BandSection from './components/sections/band-section.vue'
 import FooterSection from './components/sections/footer-section.vue'
 import HeaderSection from './components/sections/header-section.vue'
 import MainSection from './components/sections/main-section.vue'
-
+document.title = "DC COMICS"
 export default {
   name: 'App',
   components: {
@@ -33,7 +33,6 @@ export default {
 
 <style lang="scss">
 @import "@/variable.scss";
-
 
 * {
   padding: 0;
