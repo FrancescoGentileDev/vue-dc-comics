@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :src='require(`../assets/img/${img}`)' alt="" srcset="" />
+    <img :src='require(`@/assets/img/${img}`)' alt="" srcset="" />
     <p>{{text}}</p>
   </div>
 </template>

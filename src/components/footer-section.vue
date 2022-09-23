@@ -6,12 +6,11 @@
       <div class="container">
         <div class="link-section">
             <div class="col">
-            <link-list class="link-list" />
-          <link-list class="link-list" />
+            <link-list :title="footLink[0].title" :option="footLink[0].links"/>
+            <link-list :title="footLink[1].title" :option="footLink[1].links"/>
             </div>
-          
-          <link-list class="link-list" />
-          <link-list class="link-list" />
+          <link-list :title="footLink[2].title" :option="footLink[2].links"/>
+          <link-list :title="footLink[3].title" :option="footLink[3].links"/>
         </div>
 
         <div class="footer-jumbo"></div>
@@ -35,8 +34,15 @@
 
 <script>
 import linkList from "./link-list-component.vue";
+import footerlinks from '@/Data/footerlinks'
+
 export default {
   components: { linkList },
+  data: function() {
+return {
+    footLink: footerlinks
+  };
+},
 };
 </script>
 

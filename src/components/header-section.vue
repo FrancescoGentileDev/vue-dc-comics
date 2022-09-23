@@ -5,16 +5,16 @@
         <img src="../assets/img/dc-logo.png" alt="" srcset="" />
       </div>
       <nav>
-        <a href="#">Pippo</a>
-        <a href="#">Pippo</a>
-        <a href="#">Pippo</a>
-        <a href="#">Pippo</a>
-        <a href="#">Pippo</a>
-        <a href="#">Pippo</a>
-        <a href="#">Pippo</a>
-        <a href="#">Pippo</a>
-        <a href="#">Pippo</a>
-        <a href="#">Pippo</a>
+        <a href="#">Characters</a>
+        <a href="#">comics</a>
+        <a href="#">movies</a>
+        <a  class="active"  href="#">tv</a>
+        <a href="#">games</a>
+        <a href="#">collectibles</a>
+        <a href="#">videos</a>
+        <a href="#">fans</a>
+        <a href="#">news</a>
+        <a href="#">shop</a>
       </nav>
     </div>
   </header>
@@ -43,7 +43,7 @@ header {
     padding: 1rem;
 
     nav {
-
+      display: flex;
       a {
         color: $footer-color;
         font-weight: bold;
@@ -51,6 +51,24 @@ header {
         text-decoration: none;
         padding: 0.6rem;
         text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      &.active {
+        color: $brand-color
+      }  
+      &.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        text-align: center;
+        width: 80%;
+        height: 3px;
+        margin: 0 auto;
+        background-color: $brand-color;
+
+      }
       }
 
     }
