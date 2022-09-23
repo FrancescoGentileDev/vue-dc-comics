@@ -1,18 +1,22 @@
 import '@babel/polyfill'
 import 'mutationobserver-shim'
 import Vue from 'vue'
-import './plugins/bootstrap-vue'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import App from './App'
 
-// Import Bootstrap and BootstrapVue CSS files (order is important)
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+/* import the fontawesome core */
+import { library } from '@fortawesome/fontawesome-svg-core'
 
-// Make BootstrapVue available throughout your project
-Vue.use(BootstrapVue)
-// Optionally install the BootstrapVue icon components plugin
-Vue.use(IconsPlugin)
-import App from './App.vue'
+/* import font awesome icon component */
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+/* import specific icons */
+import { faFacebook, faTwitter, faInstagram,faPinterest, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
+/* add icons to the library */
+library.add(faFacebook,faTwitter, faInstagram,faPinterest,faLinkedin )
+
+/* add font awesome icon component */
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
 

@@ -18,14 +18,14 @@
     <footer class="down-footer">
       <button>Sign up now!</button>
       <div class="social">
-        <link-list :title="social.title" :option="social.links" :orizzontal="true" color="#0282f9"/>
+        <link-list :title="social.title" :option="social.links" :orizzontal="true" :icon="true" color="#0282f9"/>
       </div>
     </footer>
   </section>
 </template>
 
 <script>
-import linkList from "./link-list-component.vue";
+import linkList from "../components/link-list-component.vue";
 import { footerlinks, socialLinks } from "@/Data/footerlinks";
 
 export default {
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../variable.scss";
+@import "@/variable.scss";
 
 section {
   background-color: $footer-color;
@@ -49,7 +49,7 @@ section {
 
   .upper-footer {
     position: relative;
-    background-image: url("../assets/img/footer-bg.jpg");
+    background-image: url("@/assets/img/footer-bg.jpg");
     background-size: cover;
     height: 400px;
 
@@ -63,7 +63,7 @@ section {
       }
       .footer-jumbo {
         align-self: flex-end;
-        background-image: url("../assets/img/dc-logo-bg.png");
+        background-image: url("@/assets/img/dc-logo-bg.png");
         background-repeat: no-repeat;
         background-color: transparent;
         background-position-y: -50px;

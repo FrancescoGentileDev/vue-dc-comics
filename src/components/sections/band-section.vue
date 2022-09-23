@@ -11,14 +11,14 @@
 </template>
 
 <script>
-import bandComponent from "./band-component.vue";
+import bandComponent from "../components/band-component.vue";
 export default {
   components: { bandComponent },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../variable.scss";
+@import "@/variable.scss";
 
 div {
   background-color: $brand-color;

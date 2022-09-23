@@ -61,10 +61,10 @@ let footerlinks =
 let socialLinks = {
   title: "Follow us",
   links: [
-  new LinkCreate("#", "FB"),
-  new LinkCreate("#", "INSTA"),
-  new LinkCreate("#", "PINTE"),
-  new LinkCreate("#", "LINKED"),
+  new LinkCreate("#", "fa-brands fa-facebook"),
+  new LinkCreate("#", "fa-brands fa-instagram"),
+  new LinkCreate("#", "fa-brands fa-twitter"),
+  new LinkCreate("#", "fa-brands fa-linkedin"),
   ]
 }
 

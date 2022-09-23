@@ -2,7 +2,7 @@
   <header>
     <div class="header-container">
       <div class="img">
-        <img src="../assets/img/dc-logo.png" alt="" srcset="" />
+        <img src="@/assets/img/dc-logo.png" alt="" srcset="" />
       </div>
       <nav>
         <a href="#">Characters</a>
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../variable";
+@import "@/variable.scss";
 
 header {
   background-color: $background;

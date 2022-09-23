@@ -1,7 +1,10 @@
 <template>
   <ul :class="{orizzontal: orizzontal}">
     <li class="title">{{ title }}</li>
-    <li v-for="(item, index) in option" :key="index" :href="item.link">{{ item.text }}</li>
+    <li v-for="(item, index) in option" :key="index" :href="item.link">
+    <font-awesome-icon v-if="icon" :icon="item.text"/>
+    <div v-else>{{item.text}}</div>
+    </li>
   </ul>
 </template>
 
@@ -15,25 +18,23 @@ export default {
   props: {
     title: String,
     orizzontal: Boolean,
+    icon: Boolean,
     color: {
       type: String,
       default: "white"
     },
     option: Array,
   },
-  computed: {
-    
-  }
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../variable.scss";
+@import "@/variable.scss";
 
 .title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: v-bind(color);
+  color: #{v-bind(color)};
   text-transform: uppercase;
   margin-bottom: 0.5rem;
   cursor: default;
@@ -47,7 +48,8 @@ ul {
     display: flex;
     align-items: center;
     li {
-        margin: 1rem
+        margin: 1rem;
+        font-size: 1.5rem;
     }
   }
 

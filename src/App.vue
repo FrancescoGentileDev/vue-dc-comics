@@ -11,10 +11,10 @@
 
 
 <script>
-import BandSection from './components/band-section.vue'
-import FooterSection from './components/footer-section.vue'
-import HeaderSection from './components/header-section.vue'
-import MainSection from './components/main-section.vue'
+import BandSection from './components/sections/band-section.vue'
+import FooterSection from './components/sections/footer-section.vue'
+import HeaderSection from './components/sections/header-section.vue'
+import MainSection from './components/sections/main-section.vue'
 
 export default {
   name: 'App',
@@ -32,7 +32,7 @@ export default {
 
 
 <style lang="scss">
-@import "variable.scss"; 
+@import "@/variable.scss";
 
 
 * {
