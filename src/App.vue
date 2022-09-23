@@ -32,18 +32,36 @@ export default {
 
 
 <style lang="scss">
-@import "variable.scss";  
+@import "variable.scss"; 
+
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: GretaSens;
+  src: url('./assets/fonts/GretaSansStd-Medium.woff2');
+  font-weight: normal;
+}
+@font-face {
+  font-family: GretaSens;
+  src: url('./assets/fonts/GretaSansCondensedStd-Bold.woff2');
+  font-weight: bold;
+}
+@font-face {
+  font-family: GretaSens;
+  src: url('./assets/fonts/GretaSansCondensedStd-SemiBold.woff2');
+  font-weight: 500;
+}
+
 body {
 
   background-color: $text-color;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: GretaSens, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 

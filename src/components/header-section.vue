@@ -50,6 +50,7 @@ header {
         font-size: 1.2rem;
         text-decoration: none;
         padding: 0.6rem;
+        text-transform: uppercase;
       }
 
     }
