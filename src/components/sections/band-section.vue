@@ -1,23 +1,28 @@
 <template>
   <div>
     <section>
-      <imageAndText class="component" img="buy-comics-digital-comics.png" text="Digital Comics" size="4rem"/>
-      <imageAndText class="component" img="buy-comics-merchandise.png" text="DC Merchandise" size="4rem" />
-      <imageAndText class="component" img="buy-comics-shop-locator.png" text="Subscription" size="4rem" />
       <imageAndText
+        v-for="(item, index) in merchandise"
+        :key="index"
         class="component"
-        img="buy-comics-subscriptions.png"
-        text="comic shop locator" size="4rem"
+        :img="item.img"
+        :text="item.text"
+        size="4rem"
       />
-      <imageAndText class="component" img="buy-dc-power-visa.svg" text="dc power visa"  size="4rem"/>
     </section>
   </div>
 </template>
 
 <script>
+import { merchandise } from "@/Data/footerlinks";
 import imageAndText from "../components/image-and-text.vue";
 export default {
   components: { imageAndText },
+  data() {
+    return {
+      merchandise: merchandise,
+    };
+  },
 };
 </script>
 
