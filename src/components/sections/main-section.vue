@@ -39,6 +39,7 @@ export default {
 .jumbotron {
   height: 450px;
   background-image: url(@/assets/img/jumbotron.jpg);
+  background-attachment: fixed
 }
 
 section {

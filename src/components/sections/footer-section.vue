@@ -50,6 +50,7 @@ section {
   .upper-footer {
     position: relative;
     background-image: url("@/assets/img/footer-bg.jpg");
+    background-attachment: fixed;
     background-size: cover;
     height: 400px;
 
