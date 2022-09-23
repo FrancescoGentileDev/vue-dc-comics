@@ -1,32 +1,24 @@
 <template>
   <section>
-
-  
     <footer class="upper-footer">
       <div class="container">
         <div class="link-section">
-            <div class="col">
-            <link-list :title="footLink[0].title" :option="footLink[0].links"/>
-            <link-list :title="footLink[1].title" :option="footLink[1].links"/>
-            </div>
-          <link-list :title="footLink[2].title" :option="footLink[2].links"/>
-          <link-list :title="footLink[3].title" :option="footLink[3].links"/>
+          <link-list
+            v-for="(item, index) in footLink"
+            :key="index"
+            :title="item.title"
+            :option="item.links"
+          />
         </div>
 
         <div class="footer-jumbo"></div>
       </div>
     </footer>
 
-
     <footer class="down-footer">
       <button>Sign up now!</button>
       <div class="social">
-        <p>FOLLOW US</p>
-        <a href="#">F</a>
-        <a href="#">F</a>
-        <a href="#">F</a>
-        <a href="#">F</a>
-        <a href="#">F</a>
+        <link-list :title="social.title" :option="social.links" :orizzontal="true" color="#0282f9"/>
       </div>
     </footer>
   </section>
@@ -34,15 +26,16 @@
 
 <script>
 import linkList from "./link-list-component.vue";
-import footerlinks from '@/Data/footerlinks'
+import { footerlinks, socialLinks } from "@/Data/footerlinks";
 
 export default {
   components: { linkList },
-  data: function() {
-return {
-    footLink: footerlinks
-  };
-},
+  data: function () {
+    return {
+      footLink: footerlinks,
+      social: socialLinks,
+    };
+  },
 };
 </script>
 
@@ -61,13 +54,12 @@ section {
     height: 400px;
 
     .container {
-        height: 100%;
-        @include container;
-        @include flex-center;
+      height: 100%;
+      @include container;
+      @include flex-center;
       .link-section {
         display: flex;
         flex-direction: row;
-
       }
       .footer-jumbo {
         align-self: flex-end;
@@ -89,17 +81,9 @@ section {
   }
 }
 
-
 .social {
   @include flex-center;
   font-weight: bold;
-  color: $brand-color;
-
-  a {
-    padding: 1.5rem;
-    color: white;
-    text-decoration: none;
-  }
 }
 
 button {

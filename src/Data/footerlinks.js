@@ -3,11 +3,12 @@ class LinkCreate {
       this.link = link;
       this.text = text
     }
-  }
+}
+
   
 
 
-let links =
+let footerlinks =
     [
         {
           title: "dc comics",
@@ -57,6 +58,15 @@ let links =
   
       ]
 
+let socialLinks = {
+  title: "Follow us",
+  links: [
+  new LinkCreate("#", "FB"),
+  new LinkCreate("#", "INSTA"),
+  new LinkCreate("#", "PINTE"),
+  new LinkCreate("#", "LINKED"),
+  ]
+}
 
 
 
@@ -67,5 +77,4 @@ let links =
 
 
 
-
-export default links
+export {footerlinks, socialLinks}
